@@ -189,7 +189,7 @@
     left: 0;
     width: 100%;
     background: white;
-    display: none;
+    display: none !important;
     flex-direction: column;
     padding: 20px 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
@@ -197,7 +197,7 @@
   }
 
   .nav-links.active {
-    display: flex; /* show when hamburger clicked */
+    display: flex !important ;/* show when hamburger clicked */
   }
 
   .nav-links li {
