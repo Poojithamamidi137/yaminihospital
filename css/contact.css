@@ -166,7 +166,9 @@
   color: white !important;
   padding-left: 22px;       /* slight slide-in effect */
 }
-/* Hamburger hidden in desktop */
+
+/* ---------------- RESPONSIVE HAMBURGER FIX ---------------- */
+
 .menu-toggle {
   display: none;
   font-size: 35px;
@@ -174,37 +176,28 @@
   color: #08254c;
 }
 
-/* -----------------------------
-   MOBILE RESPONSIVE CSS
---------------------------------*/
+/* MOBILE VIEW */
 @media (max-width: 850px) {
 
   .menu-toggle {
-    display: block;
+    display: block; /* show hamburger */
   }
 
-  .nav-container {
-    padding: 10px 20px;
-  }
-
-  /* NAV LINKS becomes dropdown panel */
   .nav-links {
     position: absolute;
-    top: 90px; /* BELOW HEADER — FIXES OVERLAY */
+    top: 100px;          /* ensures NO OVERLAP */
     left: 0;
     width: 100%;
     background: white;
     display: none;
     flex-direction: column;
-    padding: 15px 0;
-    border-top: 2px solid #ddd;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     z-index: 999;
   }
 
-  /* Show menu when active */
   .nav-links.active {
-    display: flex;
+    display: flex; /* show when hamburger clicked */
   }
 
   .nav-links li {
@@ -212,12 +205,7 @@
     text-align: center;
   }
 
-  .nav-links a {
-    margin-left: 0 !important;
-    font-size: 18px;
-  }
-
-  /* Dropdown fixes for mobile */
+  /* Mobile dropdown */
   .services-dropdown .dropdown {
     position: relative;
     background: #08254c;
@@ -225,15 +213,7 @@
     border-radius: 0;
     box-shadow: none;
   }
-
-  .service-item {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
 }
-
-
-
 
 
 
@@ -452,10 +432,9 @@
   max-width: 1200px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
- } /* equal spacing between
-
+}
 
 /* Logo at top with spacing */
 .footer-logo-box {
