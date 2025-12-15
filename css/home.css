@@ -136,6 +136,74 @@
 .services-dropdown .dropdown {
   margin-top: 2px;
 }
+/* -------------------------------
+   RESPONSIVE NAVBAR (NO HTML CHANGE)
+----------------------------------*/
+
+/* Hide menu icon by default */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #08254c;
+}
+
+/* For mobile screens */
+@media (max-width: 850px) {
+
+  /* Show hamburger */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* NAV CONTAINER ADJUST */
+  .nav-container {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: 10px;
+    background: #ffffff;
+    flex-direction: column;
+    width: 250px;
+    padding: 20px 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+    display: none;   /* hidden by default */
+  }
+
+  /* show menu when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 12px 0;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    font-size: 18px;
+  }
+
+  /* Dropdown full width in mobile */
+  .services-dropdown .dropdown {
+    position: relative;
+    min-width: 100%;
+    margin-left: 0;
+    box-shadow: none;
+  }
+
+  .service-item {
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
+}
+
 
 /* TOP BAR */
 .top-bar {

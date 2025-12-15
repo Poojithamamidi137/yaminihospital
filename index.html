@@ -30,49 +30,36 @@
 
 
  
- <header>
-  <div class="nav-container">
+  <header>
+    <div class="nav-container">
+        <div class="logo">
+      <img src="x.jpg" alt="Yamini Multi Speciality Hospital Logo">
+      </div>
+<div class="menu-toggle"><i class="bi bi-list"></i></div>
 
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="x.jpg" alt="Yamini MultiSpeciality Hospital">
-    </div>
-
-    <!-- HAMBURGER ICON (MOBILE) -->
-    <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <!-- NAV LINKS -->
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-
-      <!-- SERVICES DROPDOWN -->
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
       <li class="services-dropdown">
-        <a href="#">Services ▾</a>
-        <div class="dropdown">
-          <ul>
-            <li><a href="paediatrics.html" class="service-item">Paediatrics & Neonatology</a></li>
-            <li><a href="orthopaedic.html" class="service-item">Orthopaedics</a></li>
-            <li><a href="gyn.html" class="service-item">Gynaecology & Obstetrics</a></li>
-            <li><a href="general.html" class="service-item">General Medicine</a></li>
-          </ul>
-        </div>
-      </li>
+  <a href="#" class="nav-link">Services ▾</a>
 
-      <li><a href="contact.html">Contact Us</a></li>
+  <div class="dropdown">
+    <ul>
+      <li><a href="paediatrics.html" class="service-item">Paediatrics & Neonatology</a></li>
+      <li><a href="orthopaedic.html" class="service-item">Orthopaedics</a></li>
+      <li><a href="gyn.html" class="service-item">Gynaecology & Obstetrics</a></li>
+      <li><a href="general.html" class="service-item">General Medicine </a></li>
+    </ul>
+  </div>
+</li>
 
-      <li>
-        <a href="contact.html" class="btn-appointment-nav">Book Appointment</a>
-      </li>
+     <li><a href="contact.html">Contact Us</a></li>
+      
+      <li><a href="contact.html" class="btn-appointment-nav"> Book Appointment</a></li>
     </ul>
 
-  </div>
-</header>
-
+    </div>
+  </header>
 
   
 
@@ -1493,20 +1480,18 @@
 
 
 
+
+
 <script>
-  const menuToggle = document.getElementById("menuToggle");
-  const navLinks = document.getElementById("navLinks");
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".menu-toggle");
+    const nav = document.querySelector(".nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
+    toggle.addEventListener("click", () => {
+        nav.classList.toggle("active");
+    });
+});
 </script>
-
-
-
-
-
-
 
 </body>
 </html>
