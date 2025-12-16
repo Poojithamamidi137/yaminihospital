@@ -118,22 +118,7 @@
 ================================*/
 
 /* Hide hamburger on desktop */
-.menu-toggle {
-  display: none;
-   margin-right: 20px; 
-}
 
-/* MOBILE VIEW */
-@media (max-width: 850px) {
-
-  /* Show hamburger */
-  .menu-toggle {
-    display: block;
-    font-size: 34px;
-    cursor: pointer;
-    color: #08254c;
-     margin-right: 15px; 
-  }
 
   /* Keep header height stable */
   header {
@@ -188,7 +173,7 @@
     font-size: 16px;
     padding: 10px 20px;
   }
-}
+
 
 
     /* Blue Appointment Button */
@@ -289,13 +274,18 @@
 --------------------------------*/
 @media (max-width: 850px) {
 
-  .menu-toggle {
-    display: block;
+  .nav-container {
+    flex-direction: row;        /* ✅ keep logo & toggle in one line */
+    align-items: center;
+    justify-content: space-between;
   }
 
-  .nav-container {
-    padding: 10px 20px;
+  .menu-toggle {
+    display: block;
+    margin-left: auto;          /* ✅ pushes toggle to right of logo */
   }
+}
+
 
   /* NAV LINKS becomes dropdown panel */
   .nav-links {
@@ -340,7 +330,7 @@
     font-size: 16px;
     padding: 10px 20px;
   }
-}
+
 
 
 

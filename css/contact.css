@@ -216,6 +216,20 @@
     box-shadow: none;
   }
 }
+@media (max-width: 850px) {
+
+  .nav-container {
+    flex-direction: row;        /* ✅ keep logo & toggle in one line */
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;          /* ✅ pushes toggle to right of logo */
+  }
+}
+
 
 
 
