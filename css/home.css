@@ -275,6 +275,16 @@
   }
 }
 
+/* ===== FORCE MOBILE NAV OPEN ===== */
+@media (max-width: 850px) {
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-links.active {
+    display: flex !important;
+  }
+}
 
 
     /* DROPDOWN */
