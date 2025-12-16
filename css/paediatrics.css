@@ -681,3 +681,29 @@
     padding: 0 10px;
   }
 }
+
+
+
+/* ===== MOBILE SERVICES DROPDOWN FIX (FINAL) ===== */
+@media (max-width: 850px) {
+
+  .services-dropdown .dropdown {
+    position: static;
+    background: white;        /* ✔ NO blue */
+    width: auto;              /* ✔ no full width */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    margin-top: 8px;
+  }
+
+  .service-item {
+    color: #08254c;           /* readable text */
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .service-item:hover {
+    background: #eef7ff;
+    color: #08254c !important;
+  }
+}
