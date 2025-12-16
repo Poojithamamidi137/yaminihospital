@@ -215,14 +215,38 @@
     font-size: 18px;
   }
 }
-/* ===== FORCE MOBILE NAV OPEN ===== */
+/* ===== FINAL MOBILE NAV FIX ===== */
 @media (max-width: 850px) {
+
+  .menu-toggle {
+    display: block;
+    font-size: 34px;
+    cursor: pointer;
+  }
+
+  .nav-container {
+    position: relative;
+  }
+
   .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
     display: none !important;
+    flex-direction: column;
+    padding: 15px 0;
+    z-index: 9999;
   }
 
   .nav-links.active {
     display: flex !important;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 12px 0;
   }
 }
 
