@@ -88,6 +88,7 @@
 /* Hide hamburger on desktop */
 .menu-toggle {
   display: none;
+   margin-right: 20px; 
 }
 
 /* MOBILE VIEW */
@@ -99,6 +100,7 @@
     font-size: 34px;
     cursor: pointer;
     color: #08254c;
+     margin-right: 15px; 
   }
 
   /* Keep header height stable */
@@ -151,7 +153,7 @@
   top: 100%;
   left: 0;
   min-width: 220px;
-  background: #08254c;      /* blue background */
+  background :white;      /* blue background */
   border-radius: 12px;      /* <<< rounded dropdown */
   padding: 10px 0;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);

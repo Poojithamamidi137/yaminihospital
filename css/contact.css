@@ -170,16 +170,19 @@
 
 .menu-toggle {
   display: none;
-  font-size: 35px;
-  cursor: pointer;
-  color: #08254c;
+   margin-right: 20px; 
 }
 
 /* MOBILE VIEW */
 @media (max-width: 850px) {
 
+  /* Show hamburger */
   .menu-toggle {
-    display: block; /* show hamburger */
+    display: block;
+    font-size: 34px;
+    cursor: pointer;
+    color: #08254c;
+     margin-right: 15px; 
   }
 
   .nav-links {

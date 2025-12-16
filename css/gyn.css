@@ -111,6 +111,7 @@
 /* Hide hamburger on desktop */
 .menu-toggle {
   display: none;
+   margin-right: 20px; 
 }
 
 /* MOBILE VIEW */
@@ -122,6 +123,7 @@
     font-size: 34px;
     cursor: pointer;
     color: #08254c;
+     margin-right: 15px; 
   }
 
   /* Keep header height stable */

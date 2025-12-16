@@ -8,16 +8,11 @@
     body{
       margin:0;
       font-family:Arial, Helvetica, sans-serif;
-      background:#f5f9fb;
+      background:#9CA7B7
+ ;
     }
 
-
     
-
-
-  
-
-     
     header{
       background:#ffffff;
       box-shadow:0 2px 8px rgba(0,0,0,0.1);
@@ -46,7 +41,6 @@
       height:110px;
       width:auto;
       border-radius:2px;
-     
     }
 
 
@@ -94,6 +88,8 @@
 /* Hide hamburger on desktop */
 .menu-toggle {
   display: none;
+   margin-right: 20px; 
+  
 }
 
 /* MOBILE VIEW */
@@ -105,6 +101,7 @@
     font-size: 34px;
     cursor: pointer;
     color: #08254c;
+     margin-right: 15px; 
   }
 
   /* Keep header height stable */
@@ -142,20 +139,64 @@
     font-size: 18px;
     margin-left: 0 !important;
   }
-  /* Dropdown fixes for mobile */
-  .services-dropdown .dropdown {
-    position: relative;
-    background: #08254c;
-    width: 100%;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
-  .service-item {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
 }
+
+
+    /* DROPDOWN */
+    /* SERVICES DROPDOWN PARENT */
+.services-dropdown {
+  position: relative;
+}
+
+/* DROPDOWN BOX */
+.services-dropdown .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background :white;      /* blue background */
+  border-radius: 12px;      /* <<< rounded dropdown */
+  padding: 10px 0;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 999;
+}
+
+/* SHOW WHEN HOVER */
+.services-dropdown:hover .dropdown {
+  display: block;
+}
+
+/* REMOVE BULLETS */
+.services-dropdown .dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* SERVICE MENU ITEMS */
+.service-item {
+  display: block;
+  padding: 10px 18px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+  border-radius: 8px;
+  margin: 3px 8px;
+  white-space: nowrap;   /* <<< keeps all text in ONE line */
+}
+
+
+/* HOVER EFFECT */
+.service-item:hover {
+  background: #08254c;      /* hover blue */
+  color: white !important;
+  padding-left: 22px;       /* slight slide-in effect */
+}
+
+
 
 
 /* TOP BAR */
