@@ -160,6 +160,62 @@
     z-index: 2500;
   }
 }
+/* ==============================
+   FINAL MOBILE HEADER FIX
+   (ADD ONLY – DO NOT CHANGE ABOVE)
+============================== */
+
+@media (max-width: 850px) {
+
+  /* Anchor menu to header */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 5000;
+  }
+
+  .nav-container {
+    position: relative;   /* KEY FIX */
+  }
+
+  /* Hamburger position */
+  .menu-toggle {
+    position: relative;
+    z-index: 6000;
+    margin-left: auto;    /* moves toggle slightly left */
+    padding-right: 15px;
+  }
+
+  /* Mobile menu panel */
+  .nav-links {
+    position: absolute;
+    top: 100%;            /* BELOW header */
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 5500;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+  }
+
+  .nav-links a {
+    margin-left: 0 !important;
+    font-size: 18px;
+  }
+}
+
 
 
     /* DROPDOWN */
