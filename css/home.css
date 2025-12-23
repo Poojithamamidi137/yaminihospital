@@ -340,11 +340,17 @@
     .doctors-section{
       max-width:1100px;
       margin:0 auto;
-    }
+   
+      
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+    
 
     .doctors-section h1{
       text-align:center;
-      margin-bottom:30px;
+      margin-top:60px;
       font-size:32px;
       color:var(--primary);
       letter-spacing:1px;
@@ -357,7 +363,7 @@
       border-radius:14px;
       box-shadow:0 4px 12px rgba(0,0,0,0.08);
       padding:20px;
-      margin-bottom:22px;
+      
       align-items:stretch;
     }
 
@@ -1499,8 +1505,12 @@ html, body {
   color: rgb(225, 34, 66);
   letter-spacing: 1px;
 
-  margin-top: 150px;   /* move heading DOWN */
+    
+  
+  margin-top: 60px !important;
 }
+
+
 
 
 
@@ -1509,7 +1519,11 @@ html, body {
   background: #fff;
   padding: 40px 20px 90px;
   text-align: center;
+  
+  padding-top: 0;
 }
+
+
 
 .srv-heading {
   font-size: 18px;
@@ -1816,3 +1830,20 @@ html, body {
 .about-title {
   margin-top: 80px;   
 }
+.knw-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 24px;
+  background-color: rgb(225, 34, 66);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  text-align: left;      /* ensures left alignment */
+}
+
+.knw-btn:hover {
+  background-color: rgb(190, 28, 55);
+}
+
+
