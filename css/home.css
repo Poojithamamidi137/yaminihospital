@@ -451,6 +451,7 @@
       
     }
     
+                
 
 
     .know-btn {
@@ -903,10 +904,19 @@
 }
 
 
-@keyframes slide {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
+
+
+.marquee-images {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
 }
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
 
 
 
@@ -945,41 +955,105 @@ html, body {
   
 }
 
+/* ============================= */
+/* SERVICE CARD */
+/* ============================= */
 .service-card {
-    background: #fff;
-    border-radius: 14px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: .25s ease-in-out;
-    margin-top: 15px;
-    margin-bottom:25px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 15px;
+  text-align: center;
+
+  /* BLUE BORDER LIKE 1st CARD */
+  border: 2px solid #08254c;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: all 0.25s ease-in-out;
+
+  margin-top: 15px;
+  margin-bottom: 30px;
+
+  overflow: hidden;              /* VERY IMPORTANT */
 }
 
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 28px rgba(0,0,0,0.15);
-}
-
-.service-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 12px;
-}
-
+/* ============================= */
+/* TOP BLUE HEADER */
+/* ============================= */
 .service-card h5 {
-    font-size: 17px;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: #0b3a60;
+  font-size: 17px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #08254c;
+
+  padding: 14px 10px;
+  margin: -15px -15px 0 -15px;   /* attach to card edges */
+
+  border-radius: 14px 14px 0 0;
+  line-height: 1.3;
 }
 
+/* ============================= */
+/* IMAGE – TOUCHES CARD BORDER */
+/* ============================= */
+.service-card img {
+  width: calc(100% + 30px);      /* extend image */
+  height: 180px;
+  object-fit: cover;
+
+  border: none;                  /* NO IMAGE BORDER */
+  border-radius: 0;              /* flat like reference */
+
+  margin: 0 -15px 14px -15px;    /* stick to border */
+}
+
+/* ============================= */
+/* DESCRIPTION */
+/* ============================= */
 .service-card p {
-    font-size: 14px;
-    color: #444;
-    line-height: 1.45;
+  font-size: 14px;
+  color: #444;
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+/* ============================= */
+/* KNOW MORE BUTTON */
+/* ============================= */
+.know-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background: rgb(225, 34, 66);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: 0.3s ease;
+}
+
+.know-btn:hover {
+  background: #08254c;
+  transform: scale(1.05);
+}
+
+/* ============================= */
+/* HOVER EFFECT */
+/* ============================= */
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+}
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+@media (max-width: 768px) {
+  .service-card img {
+    height: 160px;
+  }
+
+  .service-card h5 {
+    font-size: 16px;
+  }
 }
 
 .know-btn {
@@ -1012,77 +1086,76 @@ html, body {
 }
 
 
+/* 🔥 FULL WIDTH FOOTER */
 .footer {
   background: #08254c;
   color: white;
-  padding: 60px 20px 40px;
+  width: 100vw;                 /* FULL SCREEN WIDTH */
+  margin-left: calc(-50vw + 50%);
+  padding: 60px 20px 30px;
+  margin-top: 20px;
 }
 
+/* INNER CONTENT */
 .footer-container {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1300px;            /* increase if needed */
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  padding-left: 0;
+  grid-template-columns: repeat(4, 1fr);
   gap: 40px;
- } 
+}
+
+/* LOGO */
 .footer-logo-box {
-  text-align: center;
- 
-  margin-top: 40px;
+  text-align: left;
 }
 
 .footer-logo {
-   height: 70px;          
-  margin-top: -40px;
+  height: 70px;
   background: white;
-  padding: 5px 10px;       
+  padding: 6px 12px;
   border-radius: 12px;
-  display: inline-block;   
-} 
-.footer-logo-box p {
-  margin-top: 15px;   
+  margin-bottom: 15px;
 }
 
-
-
+/* TEXT */
 .footer-box h3 {
-  margin-bottom: 12px;
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 .footer-box h4 {
-  margin: 12px 0 5px;
+  margin: 18px 0 8px;
 }
 
-.footer-address, .footer-branch {
-  margin-bottom: 18px;
-  line-height: 1.6;
-}
-
-
-.footer-box a, .footer-box p {
+.footer-box a,
+.footer-box p {
   color: white;
   text-decoration: none;
-  margin-bottom: 8px;
   display: block;
+  margin-bottom: 8px;
+  line-height: 1.6;
 }
 
 .footer-box a:hover {
   text-decoration: underline;
 }
 
-
+/* SOCIAL */
 .social-icons {
   display: flex;
-  gap: 12px;
-  margin-top: 8px;
+  gap: 14px;
 }
 
 .social {
-  font-size: 26px;
-  color: white;
+  font-size: 24px;
   transition: 0.3s;
+}
+
+.social:hover {
+  transform: scale(1.2);
 }
 
 .instagram:hover { color: #E1306C; }
@@ -1090,45 +1163,30 @@ html, body {
 .youtube:hover { color: #FF0000; }
 .whatsapp:hover { color: #25D366; }
 
-.social:hover {
-  transform: scale(1.2);
-}
-
+/* DIVIDER */
 .footer hr {
-  margin-top: 30px;
   border-color: rgba(255,255,255,0.3);
+  margin: 30px 0 15px;
 }
 
+/* COPYRIGHT */
 .footer-copy {
   text-align: center;
-  margin-top: 20px;   /* small space */
-  margin-bottom: 0; /* no extra space */
   font-size: 14px;
-  line-height: 1.3;
+  margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .footer-logo {
-    height: 120px;
-  }
-}
-
+/* RESPONSIVE */
 @media (max-width: 992px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
     text-align: center;
   }
 
-  .footer-logo-box {
-    grid-column: span 2;
-  }
-
   .social-icons {
     justify-content: center;
   }
 }
-
 
 @media (max-width: 600px) {
   .footer-container {
@@ -1137,24 +1195,14 @@ html, body {
   }
 
   .footer-logo-box {
-    grid-column: span 1;
-    margin-top: 0;
+    text-align: center;
+    margin-left: -40px;
   }
 
-  .social-icons {
-    justify-content: center;
-  }
-
- .footer-copy {
+  .footer-copy {
     font-size: 13px;
-    padding: 2px 10px;
-    margin: 0;
-    line-height: 1.3;
   }
 }
-
-
-
 
 
 .google-review-section {
@@ -1818,7 +1866,7 @@ html, body {
 .about h2 {
   text-align: center;      
   margin-bottom: 20px;
-  margin-left: -40px;
+  margin-left: -50px;
 }
 
 .about p {
@@ -1840,7 +1888,7 @@ html, body {
   text-decoration: none;
   border-radius: 6px;
   font-weight: 600;
-  text-align: left;      /* ensures left alignment */
+  margin-left: 10px;     /* ensures left alignment */
 }
 
 .knw-btn:hover {
@@ -1848,3 +1896,211 @@ html, body {
 }
 
 
+
+
+
+
+
+
+/* Carousel image */
+.hero-img {
+  height: 600px;
+  object-fit: cover;
+}
+
+/* Quote overlay – SAME FOR ALL SLIDES */
+.carousel-item {
+  position: relative;
+}
+
+.carousel-quote {
+
+  
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ffffff;
+    
+    /* This ensures both lines start at the same left edge */
+    text-align: left; 
+    
+    /* Layout properties */
+    line-height: 1.2;
+    padding: 20px;
+    max-width: 600px;
+}
+
+/* 📱 Mobile – still same style, resized */
+@media (max-width: 768px) {
+  .hero-img {
+    height: 380px;
+  }
+
+  .carousel-quote {
+    font-size: 20px;
+    padding: 12px 18px;
+    bottom: 12%;
+    max-width: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ============================= */
+/* HERO CONTAINER */
+/* ============================= */
+
+.hero-services {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;       /* 🔥 CENTER VERTICALLY */
+
+    text-align: center;
+    overflow: hidden;
+
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+/* ============================= */
+/* BACKGROUND IMAGE */
+/* ============================= */
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center ;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+/* ============================= */
+/* CONTENT WRAPPER */
+/* ============================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+     transform: translateY(-60px);
+}
+
+/* ============================= */
+/* HOSPITAL NAME (CENTERED) */
+/* ============================= */
+
+.hero-content h1 {
+    color: #ffffff;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    margin-bottom: 35px;   /* space below name */
+}
+
+/* ============================= */
+/* SERVICE BUTTONS (MIDDLE) */
+/* ============================= */
+
+.service-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.service-buttons a {
+    background-color: rgba(224, 224, 224, 0.9);
+    color: #333;
+
+    padding: 10px 22px;
+    border-radius: 50px;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.service-buttons a:hover {
+    background-color: #ffffff;
+}
+
+/* ============================= */
+/* BOOK APPOINTMENT BUTTON */
+/* ============================= */
+
+.appointment-btn {
+    display: inline-block;
+    background-color: #08254c;
+    color: #ffffff;
+
+    padding: 14px 42px;
+    border-radius: 50px;
+
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+
+    transition: 0.3s ease;
+}
+
+.appointment-btn:hover {
+    background-color: #0b3a70;
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+
+@media (max-width: 768px) {
+    .hero-services {
+        height: 85vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .service-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        padding: 0 20px;
+    }
+
+    .service-buttons a {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+
+    .appointment-btn {
+        font-size: 0.95rem;
+        padding: 12px 30px;
+    }
+}
